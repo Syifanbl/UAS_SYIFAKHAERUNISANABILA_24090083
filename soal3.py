@@ -1,25 +1,16 @@
-queue = []
-
-def enqueue(value):
-    queue.append(value)
-    print(f'{value} ditambahkan kedalam antrian')
-    print('='*20)
-
-def dequeue():
-    del queue[0]
-
-def front():
-    # print(f'data elemen pertama : {queue[0]}')
-    if len (queue) == 0 :
-        return'Data pertama kosong!'
-    else:
-        return queue[0]
-
-def isEmpty():
-    return len(queue) == 0
-
-front()
-
-print(f'Apakah queue kosong : {isEmpty()}')
-print(f'data pertama : {front()}')
-print(f'Daftar antrian : {queue}')
+while True:
+    for i, data in enumerate(antrian1.items,1):
+        print(f'antrian Ke-{i} {data}')
+    antrian1.tampilan()
+    pilih = int(input('Masukan Pilihan : '))
+    
+    if pilih == 1:
+        nama = str(input("Masukan Nama :"))
+        antrian1.push(nama.capitalize())
+    
+    if pilih == 2:
+        antrian1.pop()
+    if pilih == 3:
+        keluar = str("Ingin Keluar Program? (Y/T) : ").upper()
+        if keluar == "Y":
+            break
